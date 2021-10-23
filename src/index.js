@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import Wheel from "./wheel";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import "./styles.css";
+
+const SASHET = ["Happy", "Excited", "Tender", "Scared", "Angry", "Sad"];
+const SASHET_DESCRIPTION = [
+  "Nourished, Contented, Optimistic, Satisfied, Glad",
+  "Enthusiastic, Competitive, Energetic, Active",
+  "Sympathetic, Kind, Soft",
+  "Nerves, Tensed, Terrified, Frightened",
+  "Furious, Irritated",
+  "Health Problem, Depressed, Dejected",
+];
+
+export function App() {
+  const [selected, setSelected] = React.useState(null);
+
+  return (
+    <div className="App">
+      <h1>Let's talk about...</h1>
+      <Wheel items={SASHET} onSelectItem={setSelected} />
+      {selected !== null && <p>{SASHET_DESCRIPTION[selected]}</p>}
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
