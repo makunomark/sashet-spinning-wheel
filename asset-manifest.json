@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/sashet-spinning-wheel/static/css/main.a617e044.chunk.css",
+    "main.js": "/sashet-spinning-wheel/static/js/main.b6708552.chunk.js",
+    "main.js.map": "/sashet-spinning-wheel/static/js/main.b6708552.chunk.js.map",
+    "runtime-main.js": "/sashet-spinning-wheel/static/js/runtime-main.2337301e.js",
+    "runtime-main.js.map": "/sashet-spinning-wheel/static/js/runtime-main.2337301e.js.map",
+    "static/js/2.66e59993.chunk.js": "/sashet-spinning-wheel/static/js/2.66e59993.chunk.js",
+    "static/js/2.66e59993.chunk.js.map": "/sashet-spinning-wheel/static/js/2.66e59993.chunk.js.map",
+    "static/js/3.3528a56c.chunk.js": "/sashet-spinning-wheel/static/js/3.3528a56c.chunk.js",
+    "static/js/3.3528a56c.chunk.js.map": "/sashet-spinning-wheel/static/js/3.3528a56c.chunk.js.map",
+    "index.html": "/sashet-spinning-wheel/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/sashet-spinning-wheel/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.66e59993.chunk.js.LICENSE.txt": "/sashet-spinning-wheel/static/js/2.66e59993.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/sashet-spinning-wheel/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2337301e.js",
+    "static/js/2.66e59993.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.b6708552.chunk.js"
+  ]
+}
