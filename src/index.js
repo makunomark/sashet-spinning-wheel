@@ -17,12 +17,26 @@ const SASHET_DESCRIPTION = [
 
 export function App() {
   const [selected, setSelected] = React.useState(null);
+  const [spinning, setSpinning] = React.useState(false);
+
+  function onStoppedSpinning() {
+    setSpinning(false);
+  }
+
+  function onStartSpinning() {
+    setSpinning(true);
+  }
 
   return (
     <div className="App">
       <h1>Let's talk about...</h1>
-      <Wheel items={SASHET} onSelectItem={setSelected} />
-      {selected !== null && <p>{SASHET_DESCRIPTION[selected]}</p>}
+      <Wheel
+        items={SASHET}
+        onSelectItem={setSelected}
+        onStoppedSpinning={onStoppedSpinning}
+        onStartSpinning={onStartSpinning}
+      />
+      {!spinning && selected !== null && <p>{SASHET_DESCRIPTION[selected]}</p>}
     </div>
   );
 }

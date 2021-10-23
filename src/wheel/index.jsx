@@ -17,6 +17,12 @@ export default class Wheel extends React.Component {
       if (this.props.onSelectItem) {
         this.props.onSelectItem(selectedItem);
       }
+      this.props.onStartSpinning();
+      setTimeout(() => {
+        if (this.props.onStoppedSpinning) {
+          this.props.onStoppedSpinning();
+        }
+      }, 3500);
       this.setState({ selectedItem });
     } else {
       this.setState({ selectedItem: null });
