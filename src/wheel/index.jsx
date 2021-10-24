@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 
 import "./index.css";
 
@@ -17,6 +18,10 @@ export default class Wheel extends React.Component {
       if (this.props.onSelectItem) {
         this.props.onSelectItem(selectedItem);
       }
+      ReactGA.event({
+        category: "WHEEL_SPIN",
+        action: "START_WHEEL_SPIN",
+      });
       this.props.onStartSpinning();
       setTimeout(() => {
         if (this.props.onStoppedSpinning) {

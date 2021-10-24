@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import ReactGA from "react-ga";
 
 import Wheel from "./wheel";
 
 import "./styles.css";
+
+ReactGA.initialize(process.env.REACT_APP_GA_TRACKING_ID);
 
 const SASHET = ["Happy", "Excited", "Tender", "Scared", "Angry", "Sad"];
 const SASHET_DESCRIPTION = [
@@ -26,6 +29,10 @@ export function App() {
   function onStartSpinning() {
     setSpinning(true);
   }
+
+  React.useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   return (
     <div className="App">
